@@ -180,6 +180,10 @@ PRODUCT_PACKAGES += \
     qcom.fmradio \
     android.hardware.broadcastradio@1.0-impl
 
+# Doze mode
+PRODUCT_PACKAGES += \
+    RealmeDoze
+
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service
