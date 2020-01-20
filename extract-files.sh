@@ -17,8 +17,8 @@
 
 set -e
 
-DEVICE=X01BD
-VENDOR=asus
+DEVICE=RMX1801
+VENDOR=oppo
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"

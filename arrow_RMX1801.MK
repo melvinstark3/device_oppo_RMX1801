@@ -22,26 +22,26 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 # Inherit some common arrow stuff
 $(call inherit-product, vendor/arrow/config/common.mk)
 
-# Inherit from X01BD device
+# Inherit from RMX1801 device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := arrow_X01BD
-PRODUCT_DEVICE := X01BD
-PRODUCT_BRAND := asus
-PRODUCT_MODEL := Zenfone Max Pro M2
-PRODUCT_MANUFACTURER := asus
-TARGET_VENDOR := asus
-TARGET_VENDOR_PRODUCT_NAME := X01BD
-TARGET_VENDOR_DEVICE_NAME := X01BD
+PRODUCT_NAME := arrow_RMX1801
+PRODUCT_DEVICE := RMX1801
+PRODUCT_BRAND := oppo
+PRODUCT_MODEL := Realme 2 Pro
+PRODUCT_MANUFACTURER := oppo
+TARGET_VENDOR := oppo
+TARGET_VENDOR_PRODUCT_NAME := RMX1801
+TARGET_VENDOR_DEVICE_NAME := RMX1801
 
 PRODUCT_ENFORCE_RRO_TARGETS := \
     framework-res
 
-PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=X01BD PRODUCT_NAME=X01BD
+PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=RMX1801 PRODUCT_NAME=RMX1801
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="sdm660_64-user 9 PKQ1 1162 release-keys"
+    PRIVATE_BUILD_DESC="sdm660_64-user 9 PKQ1.181121.001 eng.root.20190602.025203 release-keys"
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := "Android/sdm660_64/sdm660_64:9/PKQ1/16.2017.1905.065-20190507:user/release-keys"
+BUILD_FINGERPRINT := "google/walleye/walleye:9/PPP3.180510.008/4811556:user/release-keys"
