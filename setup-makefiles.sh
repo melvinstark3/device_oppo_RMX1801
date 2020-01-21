@@ -18,8 +18,8 @@
 set -e
 
 # Required!
-DEVICE=X01BD
-VENDOR=asus
+DEVICE=RMX1801
+VENDOR=oppo
 
 INITIAL_COPYRIGHT_YEAR=2018
 
@@ -43,12 +43,6 @@ setup_vendor "$DEVICE" "$VENDOR" "$ARROW_ROOT"
 write_headers
 
 write_makefiles "$MY_DIR"/proprietary-files.txt true
-
-cat << EOF >> "$BOARDMK"
-ifeq (\$(WITH_TWRP),true)
-TARGET_RECOVERY_DEVICE_DIRS += vendor/$VENDOR/$DEVICE/proprietary
-endif
-EOF
 
 # Finish
 write_footers
