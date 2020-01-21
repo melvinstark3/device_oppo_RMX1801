@@ -182,7 +182,7 @@ PRODUCT_PACKAGES += \
 
 # Doze mode
 PRODUCT_PACKAGES += \
-    AsusDoze
+    RealmeDoze
 
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -221,7 +221,7 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.x01bd
+    android.hardware.light@2.0-service.RMX1801
 
 # Media
 PRODUCT_COPY_FILES += \
