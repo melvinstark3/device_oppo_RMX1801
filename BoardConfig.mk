@@ -13,9 +13,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-DEVICE_PATH := device/asus/X01BD
+DEVICE_PATH := device/oppo/RMX1801
 
-BOARD_VENDOR := asus
+BOARD_VENDOR := oppo
 
 # Architecture
 TARGET_ARCH := arm64
@@ -43,11 +43,11 @@ TARGET_COMPILE_WITH_MSM_KERNEL := true
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/asus/sdm660
-TARGET_KERNEL_CONFIG := m2pro_defconfig
+TARGET_KERNEL_SOURCE := kernel/oppo/sdm660
+TARGET_KERNEL_CONFIG := RMX1801_defconfig
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := ASUS_X01BD,X01BD,X01BDA
+TARGET_OTA_ASSERT_DEVICE := RMX1801,RMX1803,RMX1807
 
 # Audio
 AUDIO_FEATURE_ENABLED_3D_AUDIO := false
@@ -165,8 +165,14 @@ TARGET_NO_RPC := true
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
 
 # Dexpreopt
-WITH_DEXPREOPT := true
-WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
+ifeq ($(HOST_OS),linux)
+  ifneq ($(TARGET_BUILD_VARIANT),eng)
+    ifeq ($(WITH_DEXPREOPT),)
+      WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := false
+      WITH_DEXPREOPT := true
+    endif
+  endif
+endif
 
 # HIDL
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
@@ -216,7 +222,7 @@ TARGET_USES_OLD_MNC_FORMAT := true
 BOARD_SECCOMP_POLICY := $(DEVICE_PATH)/seccomp
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2019-05-01
+VENDOR_SECURITY_PATCH := 2019-05-05
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
@@ -248,4 +254,4 @@ WIFI_DRIVER_STATE_ON := 1
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 
 # inherit from the proprietary version
--include vendor/asus/X01BD/BoardConfigVendor.mk
+-include vendor/oppo/RMX1801/BoardConfigVendor.mk
