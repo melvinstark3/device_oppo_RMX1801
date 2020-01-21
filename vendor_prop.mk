@@ -34,7 +34,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.voice.path.for.pcm.voip=false \
     vendor.audio_hal.in_period_size=144 \
     vendor.audio_hal.period_multiplier=3 \
-    vendor.audio.adm.buffering.ms=3 \
+    vendor.audio.adm.buffering.ms=3
 
  # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -101,13 +101,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.fuse_sdcard=true
 
-# GMS
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.com.google.clientidbase=android-asus \
-    ro.com.google.clientidbase.ms=android-asus-tpin \
-    ro.com.google.rlzbrandcode=ASUP \
-    ro.com.google.rlz_ap_whitelist=y0,y5,y6,y7,y9
-
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.egl.hw=1 \
@@ -146,7 +139,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.vidc.enc.disable_bframes=1 \
     vidc.enc.dcvs.extra-buff-count=2 \
     vidc.enc.target_support_bframe=1 \
-    ro.config.media_vol_steps=30 \
+    ro.config.media_vol_steps=30
 
 # Misc
 PRODUCT_PROPERTY_OVERRIDES += \
