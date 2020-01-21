@@ -377,18 +377,7 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    init.btmac.sh \
-    init.class_main.sh \
-    init.qcom.class_core.sh \
-    init.qcom.post_boot.sh \
-    init.qcom.sensors.sh \
-    init.qcom.sh \
-    init.qcom.usb.sh \
-    fstab.qcom \
-    init.msm.usb.configfs.rc \
-    init.qcom.factory.rc \
     init.qcom.rc \
-    init.qcom.usb.rc \
     init.target.rc \
     ueventd.qcom.rc
 
