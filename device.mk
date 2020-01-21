@@ -372,7 +372,6 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    init.qcom.rc \
     init.target.rc \
     ueventd.qcom.rc
 
