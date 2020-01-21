@@ -243,10 +243,6 @@ BOARD_SEPOLICY_VERS := 28.0
 # Tap to wake
 TARGET_TAP_TO_WAKE_NODE := /proc/tpd_gesture
 
-# Vendor libinit
-TARGET_INIT_VENDOR_LIB := libinit_X01BD
-TARGET_RECOVERY_DEVICE_MODULES := libinit_X01BD
-
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flag 2
